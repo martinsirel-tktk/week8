@@ -1,0 +1,230 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Üldine */
+body {
+    font-family: "Roboto";
+    margin: 0;
+    background: #ffffff;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: 100vh;
+}
+
+/* Vasak veerg */
+aside {
+    background: #ffffff;
+    color: #333333;
+    padding: 2rem;
+    border-right: 6px solid #010659;
+}
+
+aside img {
+    width: 140px;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+aside h2 {
+    font-family: "Playfair Display", serif;
+    color: #010659;
+    font-size: 1.2rem;
+    margin: 2rem 0 0.8rem;
+}
+
+aside ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+aside ul li {
+    margin-right: 0.4rem;
+}
+
+/* Parem veerg */
+.right-column {
+    background: #ffffff;
+    color: #333333;
+    padding: 2rem;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    margin: 0;
+    line-height: 1;
+    color: #010659;
+}
+
+.header p strong {
+    font-family: "Playfair Display", serif;
+    color: #010659;
+}
+
+.header i {
+    color: #010659;
+    margin-right: 0.5rem;
+}
+
+/* Sektsioonide pealkirjad */
+section > h2 {
+    font-family: "Playfair Display", serif;
+    color: #010659;
+    font-size: 1.6rem;
+    margin: 2rem 0 1rem;
+}
+
+/* Töökogemus */
+.experience-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.exp-left {
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.exp-right {
+    line-height: 1.5;
+}
+
+/* Haridus */
+.education-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.edu-left {
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.edu-right {
+    line-height: 1.5;
+}
+
+/* Oskused */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.two-column ul {
+    list-style-position: outside;
+    padding-left: 1.2rem;
+}
+
+.two-column ul li {
+    padding-left: 0.2rem;
+}
+
+/* Hobid */
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
+    padding-left: 1.2rem;
+}
+
+/* Mobiilivaade 480px */
+@media (max-width: 480px) {
+
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    aside {
+        border-right: none;
+        border-bottom: 6px solid #010659;
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    aside img {
+        width: 90px;
+        height: 110px;
+        margin: 0 auto 1rem;
+    }
+
+    /* Header mobiilis */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .header .name-block,
+    .header .contact {
+        width: 100%;
+    }
+
+    .contact p {
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .header h1 {
+        font-size: 2.2rem;
+        word-break: break-word;
+    }
+
+    /* Üheks veeruks */
+    .experience-row,
+    .education-row,
+    .two-column {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .exp-left,
+    .edu-left {
+        margin-bottom: 0.5rem;
+    }
+
+    body {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
